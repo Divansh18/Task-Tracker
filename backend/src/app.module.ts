@@ -6,6 +6,9 @@ import { validate } from './config/environment.validation';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { TasksModule } from './tasks/tasks.module';
+import { FocusModule } from './focus/focus.module';
+import { ReflectionsModule } from './reflections/reflections.module';
+import { ProductivityModule } from './productivity/productivity.module';
 
 @Module({
   imports: [
@@ -32,12 +35,16 @@ import { TasksModule } from './tasks/tasks.module';
           database: db.name,
           autoLoadEntities: true,
           synchronize: true,
+          migrations: ['dist/migrations/*.js'],
         };
       },
     }),
     AuthModule,
     UsersModule,
     TasksModule,
+    FocusModule,
+    ReflectionsModule,
+    ProductivityModule,
   ],
 })
 export class AppModule {}

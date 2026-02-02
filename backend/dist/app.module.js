@@ -15,6 +15,9 @@ const environment_validation_1 = require("./config/environment.validation");
 const auth_module_1 = require("./auth/auth.module");
 const users_module_1 = require("./users/users.module");
 const tasks_module_1 = require("./tasks/tasks.module");
+const focus_module_1 = require("./focus/focus.module");
+const reflections_module_1 = require("./reflections/reflections.module");
+const productivity_module_1 = require("./productivity/productivity.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -44,12 +47,16 @@ exports.AppModule = AppModule = __decorate([
                         database: db.name,
                         autoLoadEntities: true,
                         synchronize: true,
+                        migrations: ['dist/migrations/*.js'],
                     };
                 },
             }),
             auth_module_1.AuthModule,
             users_module_1.UsersModule,
             tasks_module_1.TasksModule,
+            focus_module_1.FocusModule,
+            reflections_module_1.ReflectionsModule,
+            productivity_module_1.ProductivityModule,
         ],
     })
 ], AppModule);

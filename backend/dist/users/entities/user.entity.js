@@ -12,6 +12,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const typeorm_1 = require("typeorm");
 const task_entity_1 = require("../../tasks/entities/task.entity");
+const task_comment_entity_1 = require("../../tasks/entities/task-comment.entity");
+const task_activity_entity_1 = require("../../tasks/entities/task-activity.entity");
+const focus_task_entity_1 = require("../../focus/entities/focus-task.entity");
+const daily_reflection_entity_1 = require("../../reflections/entities/daily-reflection.entity");
 let User = class User {
 };
 exports.User = User;
@@ -35,6 +39,22 @@ __decorate([
     (0, typeorm_1.OneToMany)(() => task_entity_1.Task, (task) => task.user, { cascade: true }),
     __metadata("design:type", Array)
 ], User.prototype, "tasks", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => task_comment_entity_1.TaskComment, (comment) => comment.author),
+    __metadata("design:type", Array)
+], User.prototype, "taskComments", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => task_activity_entity_1.TaskActivityLog, (activity) => activity.actor),
+    __metadata("design:type", Array)
+], User.prototype, "taskActivities", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => focus_task_entity_1.FocusTask, (focusTask) => focusTask.user),
+    __metadata("design:type", Array)
+], User.prototype, "focusTasks", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => daily_reflection_entity_1.DailyReflection, (reflection) => reflection.user),
+    __metadata("design:type", Array)
+], User.prototype, "reflections", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
