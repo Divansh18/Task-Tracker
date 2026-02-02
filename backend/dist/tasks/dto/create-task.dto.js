@@ -13,6 +13,7 @@ exports.CreateTaskDto = void 0;
 const class_validator_1 = require("class-validator");
 const task_priority_enum_1 = require("../enums/task-priority.enum");
 const task_status_enum_1 = require("../enums/task-status.enum");
+const task_energy_level_enum_1 = require("../enums/task-energy-level.enum");
 class CreateTaskDto {
 }
 exports.CreateTaskDto = CreateTaskDto;
@@ -43,4 +44,16 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], CreateTaskDto.prototype, "status", void 0);
+__decorate([
+    (0, class_validator_1.IsEnum)(task_energy_level_enum_1.TaskEnergyLevel),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], CreateTaskDto.prototype, "energyLevel", void 0);
+__decorate([
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.Min)(5),
+    (0, class_validator_1.Max)(600),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], CreateTaskDto.prototype, "estimatedMinutes", void 0);
 //# sourceMappingURL=create-task.dto.js.map

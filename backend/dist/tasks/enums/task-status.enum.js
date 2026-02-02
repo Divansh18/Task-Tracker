@@ -5,6 +5,7 @@ var TaskStatus;
 (function (TaskStatus) {
     TaskStatus["Todo"] = "todo";
     TaskStatus["InProgress"] = "in_progress";
+    TaskStatus["Blocked"] = "blocked";
     TaskStatus["Done"] = "done";
 })(TaskStatus || (exports.TaskStatus = TaskStatus = {}));
 //# sourceMappingURL=task-status.enum.js.map

@@ -1,13 +1,7 @@
-import {
-  IsDateString,
-  IsEnum,
-  IsNotEmpty,
-  IsOptional,
-  IsString,
-  MaxLength,
-} from 'class-validator';
+import { IsDateString, IsEnum, IsInt, IsNotEmpty, IsOptional, IsString, Max, MaxLength, Min } from 'class-validator';
 import { TaskPriority } from '../enums/task-priority.enum';
 import { TaskStatus } from '../enums/task-status.enum';
+import { TaskEnergyLevel } from '../enums/task-energy-level.enum';
 
 export class CreateTaskDto {
   @IsString()
@@ -31,4 +25,14 @@ export class CreateTaskDto {
   @IsEnum(TaskStatus)
   @IsOptional()
   status?: TaskStatus;
+
+  @IsEnum(TaskEnergyLevel)
+  @IsOptional()
+  energyLevel?: TaskEnergyLevel;
+
+  @IsInt()
+  @Min(5)
+  @Max(600)
+  @IsOptional()
+  estimatedMinutes?: number;
 }

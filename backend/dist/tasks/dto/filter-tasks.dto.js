@@ -13,6 +13,7 @@ exports.FilterTasksDto = void 0;
 const class_validator_1 = require("class-validator");
 const task_priority_enum_1 = require("../enums/task-priority.enum");
 const task_status_enum_1 = require("../enums/task-status.enum");
+const task_energy_level_enum_1 = require("../enums/task-energy-level.enum");
 class FilterTasksDto {
 }
 exports.FilterTasksDto = FilterTasksDto;
@@ -32,4 +33,19 @@ __decorate([
     (0, class_validator_1.MaxLength)(120),
     __metadata("design:type", String)
 ], FilterTasksDto.prototype, "search", void 0);
+__decorate([
+    (0, class_validator_1.IsEnum)(task_energy_level_enum_1.TaskEnergyLevel),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], FilterTasksDto.prototype, "energyLevel", void 0);
+__decorate([
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], FilterTasksDto.prototype, "dueBefore", void 0);
+__decorate([
+    (0, class_validator_1.IsDateString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], FilterTasksDto.prototype, "dueAfter", void 0);
 //# sourceMappingURL=filter-tasks.dto.js.map
