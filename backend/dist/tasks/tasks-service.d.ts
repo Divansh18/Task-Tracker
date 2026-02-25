@@ -4,9 +4,9 @@ import { FilterTasksDto } from './dto/filter-tasks.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 import { Task } from './entities/task.entity';
 import { AuthUser } from '../auth/types/auth-user.type';
-import { TaskActivityService } from './task-activity.service';
-import { TaskSubtasksService } from './task-subtasks.service';
-import { TaskCommentsService } from './task-comments.service';
+import { TaskActivityService } from './activity/task-activity.service';
+import { TaskSubtasksService } from './subtasks/task-subtasks.service';
+import { TaskCommentsService } from './comments/task-comments.service';
 export declare class TasksService {
     private readonly tasksRepository;
     private readonly activityService;

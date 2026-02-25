@@ -5,7 +5,7 @@ import { FocusTask } from './entities/focus-task.entity';
 import { Task } from '../tasks/entities/task.entity';
 import { SetFocusTasksDto } from './dto/set-focus-tasks.dto';
 import { AuthUser } from '../auth/types/auth-user.type';
-import { TaskActivityService } from '../tasks/task-activity.service';
+import { TaskActivityService } from '../tasks/activity/task-activity.service';
 import { TaskActivityType } from '../tasks/enums/task-activity-type.enum';
 import { TaskStatus } from '../tasks/enums/task-status.enum';
 import { User } from '../users/entities/user.entity';

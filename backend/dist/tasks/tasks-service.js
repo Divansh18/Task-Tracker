@@ -20,10 +20,10 @@ const task_entity_1 = require("./entities/task.entity");
 const task_priority_enum_1 = require("./enums/task-priority.enum");
 const task_status_enum_1 = require("./enums/task-status.enum");
 const task_energy_level_enum_1 = require("./enums/task-energy-level.enum");
-const task_activity_service_1 = require("./task-activity.service");
+const task_activity_service_1 = require("./activity/task-activity.service");
 const task_activity_type_enum_1 = require("./enums/task-activity-type.enum");
-const task_subtasks_service_1 = require("./task-subtasks.service");
-const task_comments_service_1 = require("./task-comments.service");
+const task_subtasks_service_1 = require("./subtasks/task-subtasks.service");
+const task_comments_service_1 = require("./comments/task-comments.service");
 let TasksService = class TasksService {
     constructor(tasksRepository, activityService, subtasksService, commentsService) {
         this.tasksRepository = tasksRepository;

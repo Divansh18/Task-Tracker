@@ -3,7 +3,7 @@ import { FocusTask } from './entities/focus-task.entity';
 import { Task } from '../tasks/entities/task.entity';
 import { SetFocusTasksDto } from './dto/set-focus-tasks.dto';
 import { AuthUser } from '../auth/types/auth-user.type';
-import { TaskActivityService } from '../tasks/task-activity.service';
+import { TaskActivityService } from '../tasks/activity/task-activity.service';
 export declare class FocusService {
     private readonly focusRepository;
     private readonly taskRepository;

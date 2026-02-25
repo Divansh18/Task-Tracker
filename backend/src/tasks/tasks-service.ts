@@ -14,10 +14,10 @@ import { AuthUser } from '../auth/types/auth-user.type';
 import { TaskPriority } from './enums/task-priority.enum';
 import { TaskStatus } from './enums/task-status.enum';
 import { TaskEnergyLevel } from './enums/task-energy-level.enum';
-import { TaskActivityService } from './task-activity.service';              
+import { TaskActivityService } from './activity/task-activity.service';              
 import { TaskActivityType } from './enums/task-activity-type.enum';
-import { TaskSubtasksService } from './task-subtasks.service';
-import { TaskCommentsService } from './task-comments.service';
+import { TaskSubtasksService } from './subtasks/task-subtasks.service';
+import { TaskCommentsService } from './comments/task-comments.service';
 
 @Injectable()
 export class TasksService {
