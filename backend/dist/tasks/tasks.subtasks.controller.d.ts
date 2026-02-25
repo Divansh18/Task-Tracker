@@ -1,5 +1,5 @@
 import { AuthUser } from '../auth/types/auth-user.type';
-import { TasksService } from './tasks.service';
+import { TasksService } from './tasks-service';
 import { TaskSubtasksService } from './task-subtasks.service';
 import { CreateSubtaskDto } from './dto/create-subtask.dto';
 import { UpdateSubtaskDto } from './dto/update-subtask.dto';

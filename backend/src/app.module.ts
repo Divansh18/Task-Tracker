@@ -5,7 +5,7 @@ import configuration, { AppConfig } from './config/configuration';
 import { validate } from './config/environment.validation';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { TasksModule } from './tasks/tasks.module';
+import { TasksModule } from './tasks/tasks-module';
 import { FocusModule } from './focus/focus.module';
 import { ReflectionsModule } from './reflections/reflections.module';
 import { ProductivityModule } from './productivity/productivity.module';

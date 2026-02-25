@@ -16,7 +16,7 @@ exports.TaskActivityController = void 0;
 const common_1 = require("@nestjs/common");
 const jwt_auth_guard_1 = require("../auth/guards/jwt-auth.guard");
 const current_user_decorator_1 = require("../common/decorators/current-user.decorator");
-const tasks_service_1 = require("./tasks.service");
+const tasks_service_1 = require("./tasks-service");
 const task_activity_service_1 = require("./task-activity.service");
 let TaskActivityController = class TaskActivityController {
     constructor(tasksService, activityService) {

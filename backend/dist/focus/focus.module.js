@@ -13,7 +13,7 @@ const focus_task_entity_1 = require("./entities/focus-task.entity");
 const focus_service_1 = require("./focus.service");
 const focus_controller_1 = require("./focus.controller");
 const task_entity_1 = require("../tasks/entities/task.entity");
-const tasks_module_1 = require("../tasks/tasks.module");
+const tasks_module_1 = require("../tasks/tasks-module");
 let FocusModule = class FocusModule {
 };
 exports.FocusModule = FocusModule;

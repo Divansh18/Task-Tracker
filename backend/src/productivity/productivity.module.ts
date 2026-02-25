@@ -1,18 +1,11 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { Task } from '../tasks/entities/task.entity';
-import { ProductivityService } from './productivity.service';
-import { DashboardController } from './dashboard.controller';
-import { InsightsController } from './insights.controller';
-import { AnalyticsController } from './analytics.controller';
-import { PlanningController } from './planning.controller';
-import { FocusModule } from '../focus/focus.module';
-import { ReflectionsModule } from '../reflections/reflections.module';
+import { AnalyticsModule } from './analytics/analytics.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { InsightsModule } from './insights/insights.module';
+import { PlanningModule } from './planning/planning.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Task]), FocusModule, ReflectionsModule],
-  providers: [ProductivityService],
-  controllers: [DashboardController, InsightsController, AnalyticsController, PlanningController],
+  imports: [AnalyticsModule, DashboardModule, InsightsModule, PlanningModule],
 })
 export class ProductivityModule {}
 
