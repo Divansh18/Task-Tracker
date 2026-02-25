@@ -17,7 +17,10 @@ const users_module_1 = require("./users/users.module");
 const tasks_module_1 = require("./tasks/tasks-module");
 const focus_module_1 = require("./focus/focus.module");
 const reflections_module_1 = require("./reflections/reflections.module");
-const productivity_module_1 = require("./productivity/productivity.module");
+const analytics_module_1 = require("./analytics/analytics.module");
+const dashboard_module_1 = require("./dashboard/dashboard.module");
+const insights_module_1 = require("./insights/insights.module");
+const planning_module_1 = require("./planning/planning.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -56,7 +59,10 @@ exports.AppModule = AppModule = __decorate([
             tasks_module_1.TasksModule,
             focus_module_1.FocusModule,
             reflections_module_1.ReflectionsModule,
-            productivity_module_1.ProductivityModule,
+            analytics_module_1.AnalyticsModule,
+            dashboard_module_1.DashboardModule,
+            insights_module_1.InsightsModule,
+            planning_module_1.PlanningModule,
         ],
     })
 ], AppModule);

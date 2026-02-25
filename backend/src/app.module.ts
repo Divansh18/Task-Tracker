@@ -8,7 +8,10 @@ import { UsersModule } from './users/users.module';
 import { TasksModule } from './tasks/tasks-module';
 import { FocusModule } from './focus/focus.module';
 import { ReflectionsModule } from './reflections/reflections.module';
-import { ProductivityModule } from './productivity/productivity.module';
+import { AnalyticsModule } from './analytics/analytics.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { InsightsModule } from './insights/insights.module';
+import { PlanningModule } from './planning/planning.module';
 
 @Module({
   imports: [
@@ -44,7 +47,10 @@ import { ProductivityModule } from './productivity/productivity.module';
     TasksModule,
     FocusModule,
     ReflectionsModule,
-    ProductivityModule,
+    AnalyticsModule,
+    DashboardModule,
+    InsightsModule,
+    PlanningModule,
   ],
 })
 export class AppModule {}
