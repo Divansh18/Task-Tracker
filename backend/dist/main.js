@@ -24,9 +24,9 @@ async function bootstrap() {
         transform: true,
         transformOptions: { enableImplicitConversion: true },
     }));
-    const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+    const port = process.env.PORT ? Number(process.env.PORT) : 4000;
     await app.listen(port);
-    console.log(`🚀 Backend listening on http://localhost:${port}`);
+    console.log(` Backend listening on http://localhost:${port}`);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

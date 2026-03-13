@@ -1,18 +1,25 @@
-# Dependencies
+# dependencies
 node_modules/
 
-# Next.js build output
+# frontend build
 .next/
 
-# Env files
+# backend build
+dist/
+
+# environment files
 .env
 .env.local
-.env.*
+.env.development
+.env.production
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# logs
+*.log
 
-# OS files
+# system files
 .DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

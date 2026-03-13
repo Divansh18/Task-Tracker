@@ -37,7 +37,7 @@ import { PlanningModule } from './planning/planning.module';
           password: db.password,
           database: db.name,
           autoLoadEntities: true,
-          synchronize: true,
+          synchronize: configService.get('nodeEnv') !== 'production',
           migrations: ['dist/migrations/*.js'],
         };
       },
