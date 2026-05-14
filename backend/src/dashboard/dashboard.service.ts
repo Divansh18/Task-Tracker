@@ -44,14 +44,7 @@ export class DashboardService {
     private readonly reflectionsService: ReflectionsService,
   ) {}
 
-  private stafDay(date: Date): Date {
-    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  }
-
-  private endOfDay(date: Date): Date {
-    const start = this.startOfDay(date);
-    return new Date(start.getFullYear(), start.getMonth(), start.getDate(), 23, 59, 59, 999);
-  }
+  private stafDs
 
   private calculateScore(details: {
     completedToday: number;
