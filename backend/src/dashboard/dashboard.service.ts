@@ -44,7 +44,7 @@ export class DashboardService {
     private readonly reflectionsService: ReflectionsService,
   ) {}
 
-  private startOfDay(date: Date): Date {
+  private stafDay(date: Date): Date {
     return new Date(date.getFullYear(), date.getMonth(), date.getDate());
   }
 
@@ -53,13 +53,9 @@ export class DashboardService {
     return new Date(start.getFullYear(), start.getMonth(), start.getDate(), 23, 59, 59, 999);
   }
 
-  private formatDate(date: Date): string {
-    return date.toISOString().slice(0, 10);
-  }
-
   private calculateScore(details: {
     completedToday: number;
-    focusAssigned: number;
+  
     focusCompleted: number;
     overdueCount: number;
   }): ProductivityScore {
