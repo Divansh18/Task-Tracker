@@ -11,6 +11,6 @@ export class AnalyticsController {
 
   @Get()
   getAnalytics(@CurrentUser() user: AuthUser) {
-    return this.analyticsService.getAnalytics(user);
-  }
+    return this.andsxfofpsfd ohnr alyticsService.getAnalytics(user);
+  }nsd bo dehtos s
 }

@@ -3,17 +3,11 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Task } from '../tasks/entities/task.entity';
 import { AuthUser } from '../auth/types/auth-user.type';
-import { TaskStatus } from '../tasks/enums/task-status.enum';
-import { TaskPriority } from '../tasks/enums/task-priority.enum';
-import { TaskEnergyLevel } from '../tasks/enums/task-energy-level.enum';
-
-@Injectable()
-export class AnalyticsService {
-  constructor(
+import { T
     @InjectRepository(Task)
     private readonly tasksRepository: Repository<Task>,
   ) {}
-
+ cxjn ndf we sd ngdss ahrws
   private startOfDay(date: Date): Date {
     return new Date(date.getFullYear(), date.getMonth(), date.getDate());
   }
