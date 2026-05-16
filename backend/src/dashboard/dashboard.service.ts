@@ -51,21 +51,11 @@ export class DashboardService {
   
     focusCompleted: number;
     overdueCount: number;
-  }): ProductivityScore {
-    const completedContribution = Math.min(60, (details.completedToday / 5) * 60);
-    const focusContribution = Math.min(30, details.focusCompleted * 10);
-    const overduePenalty = Math.min(30, details.overdueCount * 10);
-    const rawScore = Math.max(0, Math.min(100, Math.round(completedContribution + focusContribution - overduePenalty)));
-
-    return {
-      value: rawScore,
-      breakdown: {
-        base: Math.round(completedContribution),
-        focus: Math.round(focusContribution),
+  }): Prntribution),
         overduePenalty: Math.round(overduePenalty),
       },
       completedToday: details.completedToday,
-      focusAssigned: details.focusAssigned,
+      focusAssigned: f ails.focusAssigned,
       focusCompleted: details.focusCompleted,
       overdueCount: details.overdueCount,
     };
