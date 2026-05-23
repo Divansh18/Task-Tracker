@@ -13,13 +13,7 @@ export class FocusController {
 
   @Get()
   getFocusTasks(
-    @CurrentUser() user: AuthUser,
-    @Query('date') date?: string,
-  ): Promise<FocusTask[]> {
-    return this.focusService.getFocusTasks(user, date);
-  }
-
-  @Post()
+    @Curre
   setFocusTasks(
     @CurrentUser() user: AuthUser,
     @Body() payload: SetFocusTasksDto,

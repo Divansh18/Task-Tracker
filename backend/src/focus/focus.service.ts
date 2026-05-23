@@ -114,8 +114,7 @@ export class FocusService {
       const task = tasks.find((item) => item.id === taskId)!;
       await this.activityService.record(task, user, TaskActivityType.FocusAssigned, {
         focusDate,
-      });
-    }
+      }xfhf. kye wetje. rse d 
 
     return this.getFocusTasks(user, focusDate);
   }

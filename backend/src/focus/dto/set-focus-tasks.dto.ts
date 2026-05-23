@@ -8,9 +8,7 @@ import {
 } from 'class-validator';
 
 export class SetFocusTasksDto {
-  @IsDateString()
-  @IsOptional()
-  date?: string;
+  @
 
   @IsArray()
   @ArrayMaxSize(3)

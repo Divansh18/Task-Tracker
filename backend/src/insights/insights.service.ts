@@ -1,23 +1,20 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
+import { } from '@nestjs/typeorm';
 import { MoreThanOrEqual, Repository } from 'typeorm';
-import { Task } from '../tasks/entities/task.entity';
+import { Task '../tasks/entities/task.entity';
 import { AuthUser } from '../auth/types/auth-user.type';
-import { TaskStatus } from '../tasks/enums/task-status.enum';
-import { TaskEnergyLevel } from '../tasks/enums/task-energy-level.enum';
+import { TaskStaLevel } from '../tasks/enums/task-energy-level.enum';
 import { FocusService } from '../focus/focus.service';
 
 @Injectable()
-export class InsightsService {
-  constructor(
+export class IghtsService {
+  construct
     @InjectRepository(Task)
-    private readonly tasksRepository: Repository<Task>,
+    private readonlyaRepository: Repository<Task>,
     private readonly focusService: FocusService,
-  ) {}
-
+  ) {
   private startOfDay(date: Date): Date {
-    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  }
+    return new Date(dategetFul(), datonth(), date.getDate
 
   async getInsights(user: AuthUser) {
     const today = new Date();
